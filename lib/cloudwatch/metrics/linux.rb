@@ -1,4 +1,6 @@
-require "cloudwatch/metrics/linux/version"
+# frozen_string_literal: true
+
+require 'cloudwatch/metrics/linux/version'
 
 module Cloudwatch
   module Metrics
