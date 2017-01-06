@@ -1,4 +1,4 @@
-# Cloudwatch::Metrics::Linux
+# CloudWatchMetrics::Linux
 
 Send meminfo and loadavg to CloudWatch Metrics
 

@@ -2,11 +2,11 @@
 
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'cloudwatch/metrics/linux/version'
+require 'cloud_watch_metrics/linux/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'cloudwatch-metrics-linux'
-  spec.version       = Cloudwatch::Metrics::Linux::VERSION
+  spec.version       = CloudWatchMetrics::Linux::VERSION
   spec.authors       = ['Masaki Takeuchi']
   spec.email         = ['m.ishihara@gmail.com']
 
