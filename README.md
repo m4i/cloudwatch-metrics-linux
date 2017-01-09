@@ -2,6 +2,10 @@
 
 Send meminfo and loadavg to CloudWatch Metrics
 
+[![Gem Version](https://badge.fury.io/rb/cloudwatch-metrics-linux.svg)](https://badge.fury.io/rb/cloudwatch-metrics-linux)
+[![Code Climate](https://codeclimate.com/github/m4i/cloudwatch-metrics-linux/badges/gpa.svg)](https://codeclimate.com/github/m4i/cloudwatch-metrics-linux)
+[![Dependency Status](https://gemnasium.com/badges/github.com/m4i/cloudwatch-metrics-linux.svg)](https://gemnasium.com/github.com/m4i/cloudwatch-metrics-linux)
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -18,9 +22,19 @@ Or install it yourself as:
 
     $ gem install cloudwatch-metrics-linux
 
+Or use Docker:
+
+    $ docker run --rm m4i0/cloudwatch-metrics-linux --help
+
 ## Usage
 
-TODO: Write usage instructions here
+```
+Usage: cloudwatch-metrics-linux [options]
+        --namespace <namespace>
+        --dimensions <name1=value1,name2=value2,...>
+        --interval <seconds>
+        --dryrun
+```
 
 ## Development
 

@@ -1,4 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require 'cloudwatch/metrics/linux'
+require 'cloud_watch_metrics/linux'
+
+Version = CloudWatchMetrics::Linux::VERSION
+CloudWatchMetrics::Linux.run(ARGV)
