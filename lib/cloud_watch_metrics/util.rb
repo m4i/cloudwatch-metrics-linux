@@ -18,6 +18,12 @@ module CloudWatchMetrics
         end
       end
 
+      def delete_keys!(hash, keys)
+        hash
+          .select { |key,| keys.include?(key) }
+          .each_key { |key| hash.delete(key) }
+      end
+
       def accept_hash(option_parser)
         option_parser.accept(Hash) do |s,|
           break s unless s

@@ -32,6 +32,13 @@ Or use Docker:
 Usage: cloudwatch-metrics-linux [options]
         --namespace <namespace>
         --dimensions <name1=value1,name2=value2,...>
+        --[no-]memory-used
+        --[no-]memory-utilization
+        --[no-]swap-used
+        --[no-]swap-utilization
+        --[no-]load-average-1min
+        --[no-]load-average-5min
+        --[no-]load-average-15min
         --interval <seconds>
         --dry-run
 ```
