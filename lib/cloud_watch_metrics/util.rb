@@ -10,6 +10,14 @@ module CloudWatchMetrics
     MAX_METRIC_DATA_PER_PUT = 20
 
     class << self
+      def convert_symbol_keys_from_dash_to_underscore!(hash)
+        hash.keys.each do |key|
+          if key.match?('-')
+            hash[key.to_s.tr('-', '_').to_sym] = hash.delete(key)
+          end
+        end
+      end
+
       def accept_hash(option_parser)
         option_parser.accept(Hash) do |s,|
           break s unless s
@@ -21,8 +29,8 @@ module CloudWatchMetrics
       end
 
       # @return [void]
-      def put_metric_data(namespace, metric_data, dryrun: false)
-        return dump_metric_data(namespace, metric_data) if dryrun
+      def put_metric_data(namespace, metric_data, dry_run: false)
+        return dump_metric_data(namespace, metric_data) if dry_run
 
         metric_data.each_slice(MAX_METRIC_DATA_PER_PUT).map do |data|
           Thread.start(data, cloudwatch) do |data_, cloudwatch_|

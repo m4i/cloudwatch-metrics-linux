@@ -33,7 +33,7 @@ Usage: cloudwatch-metrics-linux [options]
         --namespace <namespace>
         --dimensions <name1=value1,name2=value2,...>
         --interval <seconds>
-        --dryrun
+        --dry-run
 ```
 
 ## Development
